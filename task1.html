@@ -14,21 +14,15 @@
       //1. Вводимо необхідні дані
       const firstChild = prompt('Введіть імя першої дитини', 'Імʼя первої дитини');
       const numCandiesFirstChild = parseInt(prompt('Введіть кількість цукерок, яка є у першої дитини', '0'));
-      console.log(numCandiesFirstChild);
       const secondChild = prompt('Введіть імя другої дитини', '0');
       const numCandiesSecondChild = parseInt(prompt('Введіть кількість цукерок, яка є у другої дитини', 'Імʼя другої дитини'));
-      console.log(numCandiesSecondChild);
-
+      let result;
       //2. Знаходимо та виводемо результат
-      if (isNaN(numCandiesFirstChild) || isNaN(numCandiesSecondChild)) {
-        document.write(`Нажаль ви ввели некоретне значення. Будь-ласка почніть спочатку і внесіть числа в строку з цукерками`);
-      } else if (numCandiesFirstChild > numCandiesSecondChild) {
-        document.write(`Більша кількість цукерок знаходиться у дитини з іменем ${firstChild} у розмірі ${numCandiesFirstChild}`);
-      } else if (numCandiesFirstChild === numCandiesSecondChild) {
-        document.write(`У дітей одинакова кількість цукерок у розмірі ${numCandiesSecondChild}`);
-      } else {
-        document.write(`Більша кількість цукерок знаходиться у дитини з іменем ${secondChild} у розмірі ${numCandiesSecondChild}`);
-      }
+      if (isNaN(numCandiesFirstChild) || isNaN(numCandiesSecondChild)) result = `Нажаль ви ввели некоретне значення. Будь-ласка почніть спочатку і внесіть числа в строку з цукерками`;
+      else if (numCandiesFirstChild > numCandiesSecondChild) result = `Більша кількість цукерок знаходиться у дитини з іменем ${firstChild} у розмірі ${numCandiesFirstChild}`;
+      else if (numCandiesFirstChild === numCandiesSecondChild) result = `У дітей одинакова кількість цукерок у розмірі ${numCandiesSecondChild}`;
+      else result = `Більша кількість цукерок знаходиться у дитини з іменем ${secondChild} у розмірі ${numCandiesSecondChild}`;
+      document.write(result);
     </script>
   </body>
 </html>

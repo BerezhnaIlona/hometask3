@@ -14,20 +14,16 @@
       //1. Вводимо необхідні дані
       const randomNumbMin = 1;
       const randomNumbMax = 5;
-
+      let result;
       //2. Знаходимо результат
       let firstNumValue = parseInt(prompt('Введіть число від 1 до 5 щоб вгадати автоматично згенероване програмою число', '0'));
       let randomNumb = randomNumbMin + Math.floor(Math.random() * (randomNumbMax - randomNumbMin + 1));
 
-      if (randomNumb === firstNumValue) {
-        document.write(`Ти вгадав! Мої вітання! Автоматично згенерованим числом є ${randomNumb}`);
-      } else {
+      if (randomNumb === firstNumValue) document.write(`Ти вгадав! Мої вітання! Автоматично згенерованим числом є ${randomNumb}`);
+      else {
         let secondNumValue = parseInt(prompt('Ти нажаль не вгадав. Та в тебе є друга спроба! Введи знову число від 1 до 5!', '0'));
-        if (randomNumb === secondNumValue) {
-          document.write(`Ти вгадав! Мої вітання! Автоматично згенерованим числом є ${randomNumb}`);
-        } else {
-          document.write(`Нажаль ти не вгадав! Автоматично згенерованим числом є ${randomNumb}`);
-        }
+        if (randomNumb === secondNumValue) document.write(`Ти вгадав! Мої вітання! Автоматично згенерованим числом є ${randomNumb}`);
+        else document.write(`Нажаль ти не вгадав! Автоматично згенерованим числом є ${randomNumb}`);
       }
     </script>
   </body>

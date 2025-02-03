@@ -13,32 +13,33 @@
     <script>
       //1. Вводимо необхідні дані
       const monthOfSeason = parseInt(prompt('Введіть номер місяця від 1 до 12', '0'));
-
+      let result;
       //2. Знаходимо результат
       switch (monthOfSeason) {
         case 12:
         case 1:
         case 2:
-          document.write(`Введений номер місяця ${monthOfSeason} відноситься до пори року зима.`);
+          result = `Введений номер місяця ${monthOfSeason} відноситься до пори року зима.`;
           break;
         case 3:
         case 4:
         case 5:
-          document.write(`Введений номер місяця ${monthOfSeason} відноситься до пори року весна.`);
+          result = `Введений номер місяця ${monthOfSeason} відноситься до пори року весна.`;
           break;
         case 6:
         case 7:
         case 8:
-          document.write(`Введений номер місяця ${monthOfSeason} відноситься до пори року літо.`);
+          result = `Введений номер місяця ${monthOfSeason} відноситься до пори року літо.`;
           break;
         case 9:
         case 10:
         case 11:
-          document.write(`Введений номер місяця ${monthOfSeason} відноситься до пори року осінь.`);
+          result = `Введений номер місяця ${monthOfSeason} відноситься до пори року осінь.`;
           break;
         default:
-          document.write(`Щось пішло не так. Введіть будь-ласка число від 1 до 12.`);
+          result = `Щось пішло не так. Введіть будь-ласка число від 1 до 12.`;
       }
+      document.write(result)
     </script>
     </script>
   </body>

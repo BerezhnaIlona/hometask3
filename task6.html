@@ -14,33 +14,34 @@
     <script>
       //1. Вводимо необхідні дані
       const dayOfWeek = parseInt(prompt('Введіть номер дня тижня від 1 до 7', '0'));
-
+      let result;
       //2. Знаходимо результат
       switch (dayOfWeek) {
         case 1:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на понеділок.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на понеділок.`;
           break;
         case 2:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на вівторок.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на вівторок.`;
           break;
         case 3:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на середу.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на середу.`;
           break;
         case 4:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на четеверг.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на четеверг.`;
           break;
         case 5:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на пʼятницю.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на пʼятницю.`;
           break;
         case 6:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на суботу.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на суботу.`;
           break;
         case 7:
-          document.write(`Введений номер дня тижня ${dayOfWeek} вказує на неділю.`);
+          result = `Введений номер дня тижня ${dayOfWeek} вказує на неділю.`;
           break;
         default:
-          document.write(`Щось пішло не так. Введіть будь-ласка число від 1 до 7.`);
+          result = `Щось пішло не так. Введіть будь-ласка число від 1 до 7.`;
       }
+      document.write(result);
     </script>
   </body>
 </html>

@@ -13,20 +13,15 @@
     <script>
       //1. Вводимо необхідні дані
       let yourAge = parseInt(prompt('Будь-ласка введіть свій вік', '0'));
-
+      let result;
       //2. Знаходимо результат
-      if (2 <= yourAge && yourAge < 6) {
-        document.write(`Вік становить ${yourAge}, значить мова йде про дитину у садочку.`);
-      } else if (yourAge <= 16) {
-        document.write(`Вік становить ${yourAge}, значить мова йде про школяра.`);
-      } else if (yourAge <= 22) {
-        document.write(`Вік становить ${yourAge}, значить мова йде про студента.`);
-      } else if (yourAge <= 60) {
-        document.write(`Вік становить ${yourAge}, значить мова йде про працівника.`);
-      } else {
-        document.write(`Вік становить ${yourAge}, значить мова йде про пенсіонера.`);
-      }
+      if (2 <= yourAge && yourAge < 6) result = `Вік становить ${yourAge}, значить мова йде про дитину у садочку.`;
+      else if (yourAge <= 16) result = `Вік становить ${yourAge}, значить мова йде про школяра.`;
+      else if (yourAge <= 22) result = `Вік становить ${yourAge}, значить мова йде про студента.`;
+      else if (yourAge <= 60) result = `Вік становить ${yourAge}, значить мова йде про працівника.`;
+      else result = `Вік становить ${yourAge}, значить мова йде про пенсіонера.`;
 
+      document.write(result);
       //3. Виводимо результат
     </script>
   </body>

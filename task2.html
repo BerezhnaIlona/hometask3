@@ -14,20 +14,18 @@
       //1. Вводимо необхідні дані
       const productPrice = parseFloat(prompt('Введіть ціну товара', '0'));
       const moneyNum = parseInt(prompt('Введіть суму грошей', '0'));
-      let lotoTicket = 4;
-
+      const lotoTicket = 4;
+      let result;
       //2. Знаходимо результат
       let restMoney = `${moneyNum}` - `${productPrice}`;
-      if (isNaN(moneyNum) || isNaN(productPrice)) {
-        document.write(`Будь-ласка почніть спочатку і введіть значення в числовому форматі`);
-      } else if (restMoney === lotoTicket || restMoney > lotoTicket) {
-        document.write(`Дякуємо за покупку! Чи не бажаєте придбати лотерeйний квиток вартістю 4 грн.?`);
-      } else if (moneyNum > productPrice || moneyNum === productPrice) {
-        document.write(`Дякуємо за покупку!`);
-      } else {
+      if (isNaN(moneyNum) || isNaN(productPrice)) result = `Будь-ласка почніть спочатку і введіть значення в числовому форматі`;
+      else if (restMoney === lotoTicket || restMoney > lotoTicket) result = `Дякуємо за покупку! Чи не бажаєте придбати лотерeйний квиток вартістю 4 грн.?`;
+      else if (moneyNum > productPrice || moneyNum === productPrice) result = `Дякуємо за покупку!`;
+      else {
         restMoney *= -1;
-        document.write(`Нажаль у вас недостатньо коштів для придбання данного товарy. Не хватає суми в розмірі ${restMoney} грн`);
+        result = `Нажаль у вас недостатньо коштів для придбання данного товарy. Не хватає суми в розмірі ${restMoney} грн`;
       }
+      document.write(result);
     </script>
   </body>
 </html>
