@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 2</h1>
+    <p>З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.</p>
+    <a href="index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Вводимо необхідні дані
+      const productPrice = parseFloat(prompt('Введіть ціну товара', '0'));
+      const moneyNum = parseInt(prompt('Введіть суму грошей', '0'));
+      let lotoTicket = 4;
+
+      //2. Знаходимо результат
+      let restMoney = `${moneyNum}` - `${productPrice}`;
+      if (isNaN(moneyNum) || isNaN(productPrice)) {
+        document.write(`Будь-ласка почніть спочатку і введіть значення в числовому форматі`);
+      } else if (restMoney === lotoTicket || restMoney > lotoTicket) {
+        document.write(`Дякуємо за покупку! Чи не бажаєте придбати лотерeйний квиток вартістю 4 грн.?`);
+      } else if (moneyNum > productPrice || moneyNum === productPrice) {
+        document.write(`Дякуємо за покупку!`);
+      } else {
+        restMoney *= -1;
+        document.write(`Нажаль у вас недостатньо коштів для придбання данного товарy. Не хватає суми в розмірі ${restMoney} грн`);
+      }
+    </script>
+  </body>
+</html>

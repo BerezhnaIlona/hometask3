@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 5.</h1>
+    <p>З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може керувати.</p>
+    <a href="index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Вводимо необхідні дані
+      const categoryDrivLicens = prompt('Введіть назву однієї з категорій водія: A, B, C.', '');
+
+      //2. Знаходимо результат
+      switch (categoryDrivLicens) {
+        case 'А':
+        case 'A':
+          document.write(`З категорією посвідчення водія категорії ${categoryDrivLicens} можна керувати мотоциклами.`);
+          break;
+        case 'В':
+        case 'B':
+          document.write(`З категорією посвідчення водія категорії ${categoryDrivLicens} можна керувати мотоциклами.`);
+          break;
+        case 'С':
+        case 'C':
+          document.write(`З категорією посвідчення водія категорії ${categoryDrivLicens} можна керувати мотоциклами.`);
+          break;
+        default:
+          document.write(`Була введена не усніюча категорія водійського посвідчення. Будь-ласка введіть одну з наступних категорій: A, B, C.`);
+      }
+
+      //3. Виводимо результат
+    </script>
+  </body>
+</html>
